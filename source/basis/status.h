@@ -2,7 +2,7 @@
  * @Author: Xia Yunkai
  * @Date:   2024-12-02 09:24:14
  * @Last Modified by:   Xia Yunkai
- * @Last Modified time: 2024-12-02 09:39:48
+ * @Last Modified time: 2024-12-02 11:23:45
  */
 
 #ifndef __STATUS_H__
@@ -10,7 +10,7 @@
 #include <string>
 #include "error_code.h"
 
-namespace xviewer
+namespace xviewer::basis
 {
     class Status
     {

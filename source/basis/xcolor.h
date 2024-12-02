@@ -2,13 +2,13 @@
  * @Author: Xia Yunkai
  * @Date:   2024-12-01 22:14:45
  * @Last Modified by:   Xia Yunkai
- * @Last Modified time: 2024-12-02 09:10:37
+ * @Last Modified time: 2024-12-02 11:23:47
  */
 
 #ifndef __XCOLOR_H__
 #define __XCOLOR_H__
 
-namespace xviewer
+namespace xviewer::basis
 {
     struct Color
     {

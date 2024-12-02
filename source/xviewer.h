@@ -2,7 +2,7 @@
  * @Author: Xia Yunkai
  * @Date:   2024-12-01 21:38:38
  * @Last Modified by:   Xia Yunkai
- * @Last Modified time: 2024-12-02 09:37:10
+ * @Last Modified time: 2024-12-02 11:25:58
  */
 
 #ifndef __XVIEWER_H__
@@ -12,12 +12,16 @@
 namespace xviewer
 {
 
-    class XViewer : public BaseModule
+    class XViewer : public basis::BaseModule
     {
     public:
-        virtual Status Init() override;
+        XViewer();
 
-        virtual Status Start() override;
+        ~XViewer();
+
+        virtual basis::Status Init() override;
+
+        virtual basis::Status Start() override;
 
         virtual void Stop() override;
     };

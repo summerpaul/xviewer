@@ -2,21 +2,25 @@
  * @Author: Xia Yunkai
  * @Date:   2024-12-01 21:38:52
  * @Last Modified by:   Xia Yunkai
- * @Last Modified time: 2024-12-02 09:38:41
+ * @Last Modified time: 2024-12-02 11:26:29
  */
 #include "xviewer.h"
 
 namespace xviewer
 {
 
-    Status XViewer::Init()
+    XViewer::XViewer() : basis::BaseModule("XViewer") {}
+
+    XViewer::~XViewer() {}
+
+    basis::Status XViewer::Init()
     {
-        return Status::OK();
+        return basis::Status::OK();
     }
 
-    Status XViewer::Start()
+    basis::Status XViewer::Start()
     {
-        return Status::OK();
+        return basis::Status::OK();
     }
 
     void XViewer::Stop()

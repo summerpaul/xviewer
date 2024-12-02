@@ -2,14 +2,14 @@
  * @Author: Xia Yunkai
  * @Date:   2024-12-02 09:18:24
  * @Last Modified by:   Xia Yunkai
- * @Last Modified time: 2024-12-02 09:36:05
+ * @Last Modified time: 2024-12-02 11:23:28
  */
 #include <stdint.h>
 
 #ifndef __ERROR_CODE_H__
 #define __ERROR_CODE_H__
 
-namespace xviewer
+namespace xviewer::basis
 {
     enum ErrorCode
     {
