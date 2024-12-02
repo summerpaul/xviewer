@@ -1,6 +1,5 @@
 project(libxviewer)
 
-find_package(Backward CONFIG REQUIRED)
 find_package(Eigen3 CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
@@ -27,7 +26,6 @@ endforeach()
 
 
 add_library(${PROJECT_NAME} ${${PROJECT_NAME}_HEADERS} ${${PROJECT_NAME}_SRCS})
-target_link_libraries(${PROJECT_NAME} PRIVATE Backward::Backward)
 target_link_libraries(${PROJECT_NAME} PRIVATE Eigen3::Eigen)
 target_link_libraries(${PROJECT_NAME} PRIVATE glad::glad)
 target_link_libraries(${PROJECT_NAME} PRIVATE glfw)

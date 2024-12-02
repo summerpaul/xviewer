@@ -2,9 +2,8 @@
  * @Author: Xia Yunkai
  * @Date:   2024-12-01 22:14:45
  * @Last Modified by:   Xia Yunkai
- * @Last Modified time: 2024-12-01 22:37:03
+ * @Last Modified time: 2024-12-02 09:10:37
  */
-#include <stdint.h>
 
 #ifndef __XCOLOR_H__
 #define __XCOLOR_H__
