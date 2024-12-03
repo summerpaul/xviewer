@@ -2,7 +2,7 @@
  * @Author: Xia Yunkai
  * @Date:   2024-12-02 09:10:27
  * @Last Modified by:   Xia Yunkai
- * @Last Modified time: 2024-12-02 11:50:11
+ * @Last Modified time: 2024-12-02 13:39:38
  */
 
 #ifndef __BASE_MODULE_H__
@@ -31,27 +31,7 @@ namespace xviewer::basis
 
         virtual void Stop() = 0;
 
-        Status Run()
-        {
-            m_started = false;
-            Status errSts = Init();
-            if (!errSts.IsOK())
-            {
-                std::string errMsg = Name() + " Init failed: " + errSts.Message();
-                LOG_FATAL(errMsg.c_str());
-                return Status(errSts.Code(), errMsg);
-            }
-
-            errSts = Start();
-            if (!errSts.IsOK())
-            {
-                std::string errMsg = Name() + " Start failed: " + errSts.Message();
-                LOG_FATAL(errMsg.c_str());
-                return Status(errSts.Code(), errMsg);
-            }
-            m_started = true;
-            return Status::OK();
-        }
+        Status Run();
 
     protected:
         // 对应模块的名字

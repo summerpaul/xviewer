@@ -2,7 +2,7 @@
  * @Author: Xia Yunkai
  * @Date:   2024-12-01 22:15:18
  * @Last Modified by:   Xia Yunkai
- * @Last Modified time: 2024-12-02 11:23:41
+ * @Last Modified time: 2024-12-02 13:25:06
  */
 
 #ifndef __XTIMER_H__
@@ -11,7 +11,7 @@
 #include <string>
 #include <ctime>
 #include <iomanip>
-
+#include <sstream>
 namespace xviewer::basis
 {
     inline std::string GetCurTimeStr()

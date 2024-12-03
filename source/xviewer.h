@@ -2,28 +2,36 @@
  * @Author: Xia Yunkai
  * @Date:   2024-12-01 21:38:38
  * @Last Modified by:   Xia Yunkai
- * @Last Modified time: 2024-12-02 11:25:58
+ * @Last Modified time: 2024-12-03 09:16:07
  */
 
 #ifndef __XVIEWER_H__
 #define __XVIEWER_H__
-#include "basis/base_module.h"
 
+class Document;
 namespace xviewer
 {
 
-    class XViewer : public basis::BaseModule
+    class XViewer
     {
     public:
         XViewer();
 
         ~XViewer();
 
-        virtual basis::Status Init() override;
+        bool Init();
 
-        virtual basis::Status Start() override;
+        void Run();
 
-        virtual void Stop() override;
+        void Shutdown();
+
+        bool IsRunning() const;
+
+        void Update();
+
+    protected:
+        Document *m_pDocument;
+        bool m_initialized;
     };
 }
 

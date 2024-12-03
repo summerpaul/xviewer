@@ -13,7 +13,11 @@ find_package(yaml-cpp CONFIG REQUIRED)
 set(${PROJECT_NAME}_DIRS ${CMAKE_CURRENT_SOURCE_DIR}
                          ${CMAKE_CURRENT_SOURCE_DIR}/basis
                          ${CMAKE_CURRENT_SOURCE_DIR}/component
-                         ${CMAKE_CURRENT_SOURCE_DIR}/ui)
+                         ${CMAKE_CURRENT_SOURCE_DIR}/ui
+                         ${CMAKE_CURRENT_SOURCE_DIR}/gl
+                         ${CMAKE_CURRENT_SOURCE_DIR}/camera
+                         ${CMAKE_CURRENT_SOURCE_DIR}/app_window
+                         ${CMAKE_CURRENT_SOURCE_DIR}/imgui)
 
 foreach(dir ${${PROJECT_NAME}_DIRS})
     file(GLOB_RECURSE header_files "${dir}/*.h" "${dir}/*.hpp" "${dir}/*.hxx")
@@ -25,7 +29,7 @@ endforeach()
 
 
 
-add_library(${PROJECT_NAME} ${${PROJECT_NAME}_HEADERS} ${${PROJECT_NAME}_SRCS})
+add_library(${PROJECT_NAME} STATIC  ${${PROJECT_NAME}_HEADERS} ${${PROJECT_NAME}_SRCS})
 target_link_libraries(${PROJECT_NAME} PRIVATE Eigen3::Eigen)
 target_link_libraries(${PROJECT_NAME} PRIVATE glad::glad)
 target_link_libraries(${PROJECT_NAME} PRIVATE glfw)
