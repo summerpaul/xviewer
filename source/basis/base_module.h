@@ -2,7 +2,7 @@
  * @Author: Xia Yunkai
  * @Date:   2024-12-02 09:10:27
  * @Last Modified by:   Xia Yunkai
- * @Last Modified time: 2024-12-02 13:39:38
+ * @Last Modified time: 2024-12-03 21:47:38
  */
 
 #ifndef __BASE_MODULE_H__
@@ -29,7 +29,7 @@ namespace xviewer::basis
 
         virtual Status Start() = 0;
 
-        virtual void Stop() = 0;
+        virtual void Shutdown() = 0;
 
         Status Run();
 

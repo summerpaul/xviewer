@@ -2,7 +2,7 @@
  * @Author: Xia Yunkai
  * @Date:   2024-12-01 21:38:52
  * @Last Modified by:   Xia Yunkai
- * @Last Modified time: 2024-12-03 09:30:01
+ * @Last Modified time: 2024-12-03 21:56:12
  */
 #include "xviewer.h"
 
@@ -12,6 +12,7 @@
 #include "app_window/app_window_presenter.h"
 #include "imgui/imgui_manager.h"
 #include "imgui/imgui_presenter.h"
+#include "ui/dock_space_manager.h"
 
 #include <GLFW/glfw3.h>
 #include "basis/xdefines.h"
@@ -37,6 +38,7 @@ namespace xviewer
     {
         m_pDocument->Add(std::make_unique<app_window::AppWindow>("Xviewer"));
         m_pDocument->Add(std::make_unique<imgui::ImGuiManager>());
+        m_pDocument->Add(std::make_unique<ui::DockSpaceManager>());
         m_pDocument->Add(std::make_unique<imgui::ImGuiPresenter>());
         m_pDocument->Add(std::make_unique<app_window::AppWindowPresenter>());
         m_pDocument->Initialize();
